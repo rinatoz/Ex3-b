@@ -227,7 +227,7 @@ complex<double> solver::solve(ComplexVariable ex)
 	if (ex.getA()== complex<double> (0,0)&&ex.getB()== complex<double> (0,0)&&ex.getC()== complex<double>(0,0)) return INFINITY;
 
 	if (a == complex<double>(0.0, 0.0)) { 
-		if ((b == complex<double>(0.0, 0.0)) && (c != complex<double>(0.0, 0.0))) cout <<("There is no solution!");
+		if ((b == complex<double>(0.0, 0.0)) && (c != complex<double>(0.0, 0.0))) throw invalid_argument("There is no solution");
 		else 
 		return -c / b;
 	}
